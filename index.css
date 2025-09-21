@@ -841,3 +841,77 @@ section.project-details {
   padding-bottom: var(--gutter-medium) !important; /* keep bottom comfortable */
 }
 
+/* Header social icons */
+.header__socials {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.header__social-icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* Nav panel styling */
+.nav__panel {
+  display: flex;
+  justify-content: space-between; /* links on left, socials on right */
+  align-items: center;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 20px 40px; /* taller bar */
+  border-radius: 0;   /* flush top bar */
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* Nav panel styling */
+.nav__panel {
+  display: flex;
+  justify-content: center; /* centers nav links */
+  align-items: center;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 20px 40px;
+  position: sticky;
+  top: 20px;   /* ⬅ moves bar down 20px */
+  z-index: 999;
+  border-radius: 12px; /* optional: gives a cleaner floating look */
+}
+
+/* Socials on the far left */
+.nav__socials {
+  position: absolute;
+  left: 40px; /* keeps them pinned to the left */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav__social-icon {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.2s ease;
+}
+
+.nav__social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Centered nav links */
+.nav__items {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+

@@ -19,34 +19,45 @@
 <body>
 
   <!-- ***** Header ***** -->
-
   <header class="header" role="banner" id="top">
-    <div class="row">
-      <nav class="nav" role="navigation">
+    <div class="row header__row">
+
+      <!-- Navigation with socials inside -->
+      <nav class="nav nav__panel" role="navigation">
         <ul class="nav__items">
           <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
           <li class="nav__item"><a href="#clients" class="nav__link">Collaborations</a></li>
           <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
           <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
+
+        <div class="nav__socials">
+          <a href="https://x.com/deansatine" target="_blank">
+            <img src="./images/twitter.svg" alt="Twitter" class="nav__social-icon">
+          </a>
+          <a href="https://www.linkedin.com/in/dean-satine-881949300/" target="_blank">
+            <img src="./images/linkedin.svg" alt="LinkedIn" class="nav__social-icon">
+          </a>
+          <a href="https://www.instagram.com/dens.ig/" target="_blank">
+            <img src="./images/instagram.png" alt="Instagram" class="nav__social-icon">
+          </a>
+        </div>
       </nav>
     </div>
+
     <div class="header__text-box row">
       <div class="header__text">
         <h1 class="heading-primary">
           <span>Dean Satine</span>
         </h1>
         <p>Systems & Character Designer</p>
-        <!-- updated to scroll to featured projects -->
         <a href="#work" class="btn btn--pink">Check out my work!</a>
       </div>
     </div>
   </header>
 
   <main role="main">
-
     <!-- ***** Projects ***** -->
-
     <section class="work" id="work">
       <div class="row">
         <h2>Featured Projects</h2>
@@ -68,7 +79,6 @@
                 <li>2 Origin Designs</li>
                 <li>2 Class Designs</li>
               </ul>
-
               <div class="work__links">
                 <a href="cybernetic-strategy.html" class="link__text">View Project <span>&rarr;</span></a>
                 <a href="https://docs.google.com/document/d/1PyTKcgesv_ESwfhLt4qpjPUFTD4Jp4jF7wqHc1-l2EE/edit?tab=t.0" target="_blank" class="link__text">View Design Doc <span>&rarr;</span></a>
@@ -94,7 +104,6 @@
                 <li>3 Flashy Ability-Driven Swords</li>
                 <li>6 Unique Enemy Archetypes</li>
               </ul>
-
               <div class="work__links">
                 <a href="trisoul-tower.html" class="link__text">View Project <span>&rarr;</span></a>
                 <a href="https://docs.google.com/document/d/11SInE075fPzWa_2RKeLSAExzNvjhmE4p_J-60jmNaCI/edit?tab=t.0#heading=h.5siy6fghzinj" target="_blank" class="link__text">View Design Doc <span>&rarr;</span></a>
@@ -120,7 +129,6 @@
                 <li>Unit Designer</li>
                 <li>Score System Designer</li>
               </ul>
-
               <div class="work__links">
                 <a href="universus.html" class="link__text">View Project <span>&rarr;</span></a>
                 <a href="https://docs.google.com/document/d/1ugOlanVgMFIzNKgggH3pRcAoMdt8o6WsdZYCGFxuvgo/edit?tab=t.0#heading=h.4lfdz5m9lug3" target="_blank" class="link__text">View Design Doc <span>&rarr;</span></a>
@@ -143,7 +151,6 @@
     </section>
 
     <!-- ***** Work Experience ***** -->
-
     <section class="client" id="clients">
       <div class="row">
         <h2>Experience</h2>
@@ -156,21 +163,22 @@
     </section>
 
     <!-- ***** About ***** -->
-
     <section class="about" id="about">
       <div class="row">
         <h2>About Me</h2>
         <div class="about__content">
           <div class="about__text">
             <p>
-              I’m a systems and character designer passionate about creating engaging and meaningful systematic designs.
+              Hey! I'm a systems and character designer who's incredibly passionate about creation with constraints. 
+              I love to make cool designs with as small a scope as possible. I love socializing and working with others, 
+              and there's so much for me to learn!
             </p>
             <p>
-              My approach combines analytical thinking with creative vision, ensuring that every character feels distinct to play and every system serves both gameplay and narrative purposes. Whether working on combat systems, progression frameworks, or character rosters, I strive to craft designs that are elegant, intuitive, and full of depth.
+              I am currently attending Ontario Tech University's Game Development & Interactive Program as a part of 
+              the Game Development Student Association! I hope you're liking what you see!
             </p>
             <a href="#" class="btn">View Resume</a>
           </div>
-
           <div class="about__photo-container">
             <img class="about__photo" src="./images/dean-satine.png" alt="Dean Satine portrait" />
           </div>
@@ -180,17 +188,13 @@
   </main>
 
   <!-- ***** Contact ***** -->
-
   <section class="contact" id="contact">
     <div class="row">
-      <!-- updated heading -->
       <h2>Contact Me!</h2>
       <div class="contact__info">
         <p>
-          Interested in collaborating on a project? Need a systems designer who understands character depth? Looking for someone to bring mechanical cohesion to your game's cast? I’m always open to discussing new opportunities and creative challenges.
-        </p>
-        <p>
-          The best way to reach me is via email – let’s talk about how we can create something remarkable together.
+          Interested in my work or have any questions? I would love to talk about anything, anytime! 
+          Please reach out to me via email, or any of my social media!
         </p>
         <a href="mailto:dean@satinedesign.com" class="btn">satinedean@gmail.com</a>
       </div>
@@ -198,30 +202,14 @@
   </section>
 
   <!-- ***** Footer ***** -->
-
   <footer role="contentinfo" class="footer">
     <div class="row">
       <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href="#" title="Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="#" title="ArtStation Profile">
-            <img src="./images/artstation.svg" class="footer__social-image" alt="ArtStation">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="#" title="LinkedIn Profile">
-            <img src="./images/linkedin.svg" class="footer__social-image" alt="LinkedIn">
-          </a>
-        </li>
+        <li><a href="https://x.com/deansatine" target="_blank"><img src="./images/twitter.svg" alt="Twitter" class="footer__social-image"></a></li>
+        <li><a href="https://www.instagram.com/dens.ig/" target="_blank"><img src="./images/instagram.png" alt="Instagram" class="footer__social-image"></a></li>
+        <li><a href="https://www.linkedin.com/in/dean-satine-881949300/" target="_blank"><img src="./images/linkedin.svg" alt="LinkedIn" class="footer__social-image"></a></li>
       </ul>
-
-      <p>
-        &copy; 2025 – Dean Satine | Systems & Character Designer
-      </p>
+      <p>&copy; 2025 – Dean Satine | Systems & Character Designer</p>
     </div>
   </footer>
 
