@@ -868,14 +868,14 @@ section.project-details {
 /* Nav panel styling */
 .nav__panel {
   display: flex;
-  justify-content: center; /* centers nav links */
+  justify-content: center; /* main centering */
   align-items: center;
   background: rgba(0, 0, 0, 0.85);
   padding: 20px 40px;
+  border-radius: 0;
   position: sticky;
-  top: 20px;   /* ⬅ moves bar down 20px */
+  top: 20px;
   z-index: 999;
-  border-radius: 12px; /* optional: gives a cleaner floating look */
 }
 
 /* Socials on the far left */
@@ -914,4 +914,14 @@ section.project-details {
   text-transform: uppercase;
 }
 
+.design-doc-with-github {
+  display: flex;
+  align-items: center;   /* align GitHub with text */
+  gap: 0.8rem;           /* space between Design Doc and logo */
+}
+
+.design-doc-with-github .work__code {
+  margin-left: 0;        /* remove default margin */
+  height: 2.4rem;        /* adjust size */
+}
 
