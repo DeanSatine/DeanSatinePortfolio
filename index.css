@@ -106,9 +106,10 @@ body {
 }
 
 section {
-    padding: var(--gutter-huge) 0;
+    padding: var(--gutter-medium) 0; /* 6rem instead of 12rem */
     border-bottom: var(--border-light);
 }
+
 
 img {
     object-fit: contain;
@@ -469,8 +470,18 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .work__links {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: flex-start;
+}
+
+.work__links .link-group {
+  display: flex;
+  flex-direction: column; /* stack View Project + Design Doc */
+  gap: 0.5rem; /* space between them */
+}
+
+.work__code {
+  margin-left: var(--gutter-normal);
 }
 
 .work__text {
@@ -511,20 +522,21 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
-/* --------------------------------------- */
 /* ----- Clients ----- */
-/* --------------------------------------- */
-
 .client__logos {
     display: flex;
-    justify-content: space-between;
-    filter: invert(100%) grayscale(100%) opacity(.8);
+    justify-content: flex-start;   /* left-align logos */
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    opacity: 0.8;
 }
 
 .client__logo {
-    height: 6.5rem;
-    max-width: 18rem;
+    max-height: 12rem;
+    max-width: 30rem;
 }
+
 
 @media(max-width: 1240px) {
     .client__logos {
@@ -701,3 +713,131 @@ body:not(.user-is-tabbing) a:focus {
 .simple-header .heading-primary {
   font-size: var(--font-size-large);
 }
+/* Project Header */
+.project-header {
+  width: 100%;
+  text-align: center;
+  background: var(--black);
+  padding: var(--gutter-normal) 0;
+}
+
+.project-header__image {
+  max-width: 400px;
+  width: 90%;
+  height: auto;
+}
+
+/* Universus Page Layout */
+.project-details__container {
+  display: flex;
+  gap: var(--gutter-medium);
+  margin-top: var(--gutter-medium);
+  flex-wrap: wrap;
+}
+
+.project-details__main {
+  flex: 2;
+  min-width: 320px;
+}
+
+.project-details__media {
+  margin-bottom: var(--gutter-medium);
+}
+
+.project-details__media iframe {
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
+
+.project-details__text {
+  margin-bottom: var(--gutter-medium);
+}
+
+.project-details__sidebar {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter-small);
+}
+
+.project-details__sidebar img {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+}
+
+/* Universus Media Split */
+/* About + Responsibilities Split */
+.project-details__split {
+  display: flex;
+  gap: var(--gutter-medium);
+  margin-top: var(--gutter-medium);
+  flex-wrap: wrap;
+}
+
+.project-details__text,
+.project-details__responsibilities {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Video + Screenshots Row */
+.project-details__media-row {
+  display: flex;
+  gap: var(--gutter-medium);
+  margin-top: var(--gutter-medium);
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.project-details__media {
+  flex: 2;
+  min-width: 320px;
+}
+
+.project-details__screenshots {
+  flex: 1;
+  min-width: 250px;
+}
+
+.project-details__screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: var(--gutter-small);
+}
+
+.project-details__screenshots-grid img {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+  object-fit: cover;
+}
+
+/* Make Universus header stand out */
+.project-header {
+  padding: var(--gutter-medium) 0 var(--gutter-small); /* smaller bottom padding */
+  margin-bottom: 0; /* remove extra space below */
+}
+
+.project-header__title {
+  font-size: 9rem; /* make bigger than default huge */
+  text-decoration: underline; /* underline the title */
+  margin-bottom: var(--gutter-small); /* slight space before image */
+}
+
+.project-header__image {
+  max-width: 500px; /* allow the image to be larger */
+}
+/* Universus header tighter */
+.project-header {
+  padding-top: var(--gutter-small);   /* smaller top */
+  padding-bottom: 0;                  /* no extra space under header */
+  margin-bottom: 0;
+}
+
+section.project-details {
+  padding-top: var(--gutter-small) !important;   /* very small gap before content */
+  padding-bottom: var(--gutter-medium) !important; /* keep bottom comfortable */
+}
+
