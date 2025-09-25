@@ -6,13 +6,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
   <link rel="stylesheet" href="index.css" />
-
   <title>Labble | Dean Satine</title>
   <meta name="description" content="Labble project details by Dean Satine, systems and character designer.">
+  <style>
+    .project-details__screenshots-grid img {
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+    .project-details__screenshots-grid img:hover {
+      transform: scale(1.05);
+    }
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox.active {
+      display: flex;
+    }
+    .lightbox-content {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+      max-height: 80%;
+      animation-name: zoom;
+      animation-duration: 0.4s;
+    }
+    @keyframes zoom {
+      from {transform: scale(0.1)}
+      to {transform: scale(1)}
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .lightbox-close:hover, .lightbox-close:focus {
+      color: #bbb;
+      text-decoration: none;
+    }
+  </style>
 </head>
 
 <body>
-  <!-- Header -->
   <header class="project-header">
     <h1 class="heading-primary project-header__title">Labble</h1>
     <img src="./images/Labble.png" alt="Labble Header" class="project-header__image">
@@ -20,12 +68,9 @@
       <a href="https://deansatine.itch.io/labble" target="_blank" class="btn btn--pink">Check out on Itch.io</a>
     </div>
   </header>
-
   <main role="main">
     <section class="project-details">
       <div class="row project-details__container">
-
-        <!-- Video + Screenshots -->
         <div class="project-details__media-row">
           <div class="project-details__media">
             <h2>Gameplay Video</h2>
@@ -40,8 +85,6 @@
             </div>
           </div>
         </div>
-
-        <!-- About + Responsibilities -->
         <div class="project-details__split">
           <div class="project-details__text">
             <h2>About the Project</h2>
@@ -57,18 +100,48 @@
           </div>
         </div>
       </div>
-
       <div class="view-all-projects-container">
         <a href="projects.html" class="btn">Back to All Projects</a>
       </div>
     </section>
   </main>
-
   <footer class="footer">
     <div class="row">
       <p>&copy; 2025 - Dean Satine | Systems & Character Designer</p>
     </div>
   </footer>
-</body>
 
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const lightbox = document.getElementById('lightbox');
+      if (!lightbox) return;
+      const lightboxImg = document.getElementById('lightbox-img');
+      const closeBtn = document.querySelector('.lightbox-close');
+      const screenshots = document.querySelectorAll('.project-details__screenshots-grid img');
+
+      screenshots.forEach(image => {
+        image.addEventListener('click', () => {
+          lightbox.classList.add('active');
+          lightboxImg.src = image.src;
+        });
+      });
+
+      const closeLightbox = () => {
+        lightbox.classList.remove('active');
+      };
+
+      closeBtn.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
+    });
+  </script>
+</body>
 </html>

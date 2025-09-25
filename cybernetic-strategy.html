@@ -6,13 +6,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
   <link rel="stylesheet" href="index.css" />
-
   <title>Cybernetic Strategy | Dean Satine</title>
   <meta name="description" content="Cybernetic Strategy project details by Dean Satine, systems and character designer.">
+  <style>
+    .project-details__screenshots-grid img {
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+    .project-details__screenshots-grid img:hover {
+      transform: scale(1.05);
+    }
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox.active {
+      display: flex;
+    }
+    .lightbox-content {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+      max-height: 80%;
+      animation-name: zoom;
+      animation-duration: 0.4s;
+    }
+    @keyframes zoom {
+      from {transform: scale(0.1)}
+      to {transform: scale(1)}
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .lightbox-close:hover, .lightbox-close:focus {
+      color: #bbb;
+      text-decoration: none;
+    }
+  </style>
 </head>
 
 <body>
-  <!-- Header -->
   <header class="project-header">
     <h1 class="heading-primary project-header__title">Cybernetic Strategy</h1>
     <img src="./images/project-1.png" alt="Cybernetic Strategy Header" class="project-header__image">
@@ -20,19 +68,14 @@
       <a href="https://deansatine.itch.io/cybernetic-strategy" target="_blank" class="btn btn--pink">Check out on Itch.io</a>
     </div>
   </header>
-
   <main role="main">
     <section class="project-details">
       <div class="row project-details__container">
-
-        <!-- Video + Screenshots side by side -->
         <div class="project-details__media-row">
           <div class="project-details__media">
             <h2>Gameplay Video</h2>
-            <iframe width="800" height="450" src="https://www.youtube.com/embed/2kYqfW0Lluw" 
-                    frameborder="0" allowfullscreen></iframe>
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/2kYqfW0Lluw" frameborder="0" allowfullscreen></iframe>
           </div>
-
           <div class="project-details__screenshots">
             <h2>Screenshots</h2>
             <div class="project-details__screenshots-grid">
@@ -42,34 +85,20 @@
             </div>
           </div>
         </div>
-
-        <!-- About + Responsibilities side by side -->
         <div class="project-details__split">
-          <!-- About -->
           <div class="project-details__text">
             <h2>About the Project</h2>
-            <p>
-              An auto battler prototype in order to demonstrate my knowledge and learnings of Teamfight Tactics. 
-              A unique space and robot theme, along with a unit of each cost, as well as 2 unique Origins and 2 classes!
-            </p>
-            <p>
-              The design of the systems and units were meant to display my ability to create characters and traits 
-              that are as low scoped as possible, while still being interesting. This is proven by my ability to 
-              create the entire project within 3 weeks.
-            </p>
+            <p>An auto battler prototype in order to demonstrate my knowledge and learnings of Teamfight Tactics. A unique space and robot theme, along with a unit of each cost, as well as 2 unique Origins and 2 classes!</p>
+            <p>The design of the systems and units were meant to display my ability to create characters and traits that are as low scoped as possible, while still being interesting. This is proven by my ability to create the entire project within 3 weeks.</p>
             <div class="work__links">
-              <a href="https://github.com/DeanSatine/CyberneticStrategy" 
-                 target="_blank" title="GitHub Repository">
+              <a href="https://github.com/DeanSatine/CyberneticStrategy" target="_blank" title="GitHub Repository">
                 <img src="./images/github.svg" class="work__code" alt="Cybernetic Strategy Repository">
               </a>
               <div class="link-group">
-                <a href="https://docs.google.com/document/d/1PyTKcgesv_ESwfhLt4qpjPUFTD4Jp4jF7wqHc1-l2EE/edit?tab=t.0" 
-                   target="_blank" class="link__text">View Design Doc <span>&rarr;</span></a>
+                <a href="https://docs.google.com/document/d/1PyTKcgesv_ESwfhLt4qpjPUFTD4Jp4jF7wqHc1-l2EE/edit?tab=t.0" target="_blank" class="link__text">View Design Doc <span>&rarr;</span></a>
               </div>
             </div>
           </div>
-
-          <!-- Responsibilities -->
           <div class="project-details__responsibilities">
             <h2>My Responsibilities</h2>
             <p>As the game creator, my responsibilities included:</p>
@@ -83,19 +112,48 @@
           </div>
         </div>
       </div>
-
-      <!-- Back Button -->
       <div class="view-all-projects-container">
         <a href="projects.html" class="btn">Back to All Projects</a>
       </div>
     </section>
   </main>
-
   <footer class="footer">
     <div class="row">
       <p>&copy; 2025 - Dean Satine | Systems & Character Designer</p>
     </div>
   </footer>
-</body>
 
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const lightbox = document.getElementById('lightbox');
+      if (!lightbox) return;
+      const lightboxImg = document.getElementById('lightbox-img');
+      const closeBtn = document.querySelector('.lightbox-close');
+      const screenshots = document.querySelectorAll('.project-details__screenshots-grid img');
+
+      screenshots.forEach(image => {
+        image.addEventListener('click', () => {
+          lightbox.classList.add('active');
+          lightboxImg.src = image.src;
+        });
+      });
+
+      const closeLightbox = () => {
+        lightbox.classList.remove('active');
+      };
+
+      closeBtn.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
+    });
+  </script>
+</body>
 </html>
