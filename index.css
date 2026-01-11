@@ -924,4 +924,66 @@ section.project-details {
   margin-left: 0;        /* remove default margin */
   height: 2.4rem;        /* adjust size */
 }
+/* ========================================================= */
+/* ===== Cybernetic Strategy – Devlog CTA Button ========= */
+/* ========================================================= */
+
+.devlog-cta {
+  display: block;
+  margin: 2.5rem auto 0;
+  padding: 1.6rem 2.2rem;
+  max-width: 420px;
+
+  text-align: center;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.3;
+
+  color: var(--white);
+  background: linear-gradient(135deg, var(--pink), #ff5f8f);
+  border-radius: 1.2rem;
+  text-decoration: none;
+
+  box-shadow:
+    0 0 18px rgba(255, 50, 88, 0.55),
+    0 0 40px rgba(255, 50, 88, 0.35);
+
+  animation: cyberPulse 2.5s ease-in-out infinite;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.devlog-cta span {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.devlog-cta:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow:
+    0 0 28px rgba(255, 50, 88, 0.8),
+    0 0 60px rgba(255, 50, 88, 0.55);
+}
+
+@keyframes cyberPulse {
+  0% {
+    box-shadow:
+      0 0 16px rgba(255, 50, 88, 0.4),
+      0 0 32px rgba(255, 50, 88, 0.25);
+  }
+  50% {
+    box-shadow:
+      0 0 28px rgba(255, 50, 88, 0.75),
+      0 0 60px rgba(255, 50, 88, 0.45);
+  }
+  100% {
+    box-shadow:
+      0 0 16px rgba(255, 50, 88, 0.4),
+      0 0 32px rgba(255, 50, 88, 0.25);
+  }
+}
+
 
