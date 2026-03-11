@@ -5,114 +5,265 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css" />
-
   <title>All Projects | Dean Satine</title>
-  <meta name="description" content="Full project archive by Dean Satine, systems and character designer.">
+  <meta name="description" content="Full project archive by Dean Satine, systems and gameplay designer.">
 </head>
 
 <body>
 
   <section class="simple-header">
-    <div class="row">
-      <h1 class="heading-primary">All Projects</h1>
+    <div class="row simple-header__inner">
+      <a href="index.html" class="simple-header__logo-link">
+        <img src="./images/DeanSatineLogo.png" alt="Dean Satine — Home" class="simple-header__logo" />
+      </a>
+      <a href="index.html" class="btn btn--pink simple-header__back">← Back to Home</a>
     </div>
   </section>
 
   <main role="main">
     <section class="all-projects" id="all-projects">
       <div class="row">
-        <div class="all-projects__list">
 
-          <div class="project-item">
-            <img src="./images/project-1.png" alt="Cybernetic Strategy" class="project-item__image" style="height: 185px; width: 100%; object-fit: cover;" />
-            <h3>Cybernetic Strategy</h3>
-            <p>Auto Battler prototype created to demonstrate my understanding and knowledge of Teamfight Tactics' Unit & Trait Design.</p>
-            <a href="cybernetic-strategy.html" class="link__text">View Details <span>&rarr;</span></a>
+        <!-- SHIPPED TITLES -->
+        <div class="projects-category">
+          <h2 class="projects-category__title">Shipped Titles</h2>
+          <div class="projects-category__list">
+
+            <a href="cybernetic-strategy.html" class="project-list-card">
+              <div class="project-list-card__image-wrap">
+                <img src="./images/project-1.png" alt="Cybernetic Strategy" />
+                <div class="project-list-card__overlay"><span>View Project &rarr;</span></div>
+              </div>
+              <div class="project-list-card__info">
+                <h3>Cybernetic Strategy</h3>
+                <p>Auto Battler prototype demonstrating Teamfight Tactics' Unit &amp; Trait Design.</p>
+                <p class="project-list-card__tags">Game Creator &bull; Game Design &bull; Programming</p>
+              </div>
+            </a>
+
+            <a href="deity-excidium.html" class="project-list-card">
+              <div class="project-list-card__image-wrap">
+                <img src="./images/DeityExcidium.png" alt="Deity Excidium" />
+                <div class="project-list-card__overlay"><span>View Project &rarr;</span></div>
+              </div>
+              <div class="project-list-card__info">
+                <h3>Deity Excidium</h3>
+                <p>Explore different worlds and dimensions and take down their rulers in this thrilling Action RPG!</p>
+                <p class="project-list-card__tags">Combat Design &bull; Level Design &bull; Programming</p>
+              </div>
+            </a>
+
+            <a href="trisoul-tower.html" class="project-list-card">
+              <div class="project-list-card__image-wrap">
+                <img src="./images/project-2.png" alt="Trisoul Tower" />
+                <div class="project-list-card__overlay"><span>View Project &rarr;</span></div>
+              </div>
+              <div class="project-list-card__info">
+                <h3>Trisoul Tower</h3>
+                <p>Fast-paced hack &amp; slash with flamboyant combo mechanics and flashy, challenging enemies.</p>
+                <p class="project-list-card__tags">Combat Design &bull; Enemy Design &bull; Programming</p>
+              </div>
+            </a>
+
+            <a href="mugshot.html" class="project-list-card">
+              <div class="project-list-card__image-wrap">
+                <img src="./images/Mugshot.png" alt="Mugshot" />
+                <div class="project-list-card__overlay"><span>View Project &rarr;</span></div>
+              </div>
+              <div class="project-list-card__info">
+                <h3>Mugshot</h3>
+                <p>Sneak around the office, destroy your boss's prized mugs, and seek your revenge!</p>
+                <p class="project-list-card__tags">Stealth Design &bull; Level Design &bull; Programming</p>
+              </div>
+            </a>
+
+            <a href="universus.html" class="project-list-card">
+              <div class="project-list-card__image-wrap">
+                <img src="./images/Universus.png" alt="Universus" />
+                <div class="project-list-card__overlay"><span>View Project &rarr;</span></div>
+              </div>
+              <div class="project-list-card__info">
+                <h3>Universus</h3>
+                <p>Auto battler simulation for Ontario Tech &amp; Durham College in conjunction with Full Circle CS.</p>
+                <p class="project-list-card__tags">Combat Design &bull; Systems Design &bull; Prototyping</p>
+              </div>
+            </a>
+
+            <a href="unity-brawl.html" class="project-list-card">
+              <div class="project-list-card__image-wrap">
+                <img src="./images/UnityBrawlIcon.png" alt="Unity Brawl" />
+                <div class="project-list-card__overlay"><span>View Project &rarr;</span></div>
+              </div>
+              <div class="project-list-card__info">
+                <h3>Unity Brawl</h3>
+                <p>An activity made for high schoolers to have fun using a game engine for the first time!</p>
+                <p class="project-list-card__tags">Design &bull; Programming &bull; Prototyping</p>
+              </div>
+            </a>
+
           </div>
-	<div class="project-item">
-  	<img src="./images/CORPSE CLIMBER.png" alt="Corpse Climber" class="project-item__image" style="height: 185px; width: 100%; object-fit: cover;" />
- 	 <h3>Corpse Climber</h3>
- 	 <p>Made for the Jacksepticeye Jamsepticeye Game Jam! You're a lost guy, use your body to climb to the top of the mountain to get home!</p>
- 	 <a href="corpse-climber.html" class="link__text">View Details <span>&rarr;</span></a>
-	</div>
+        </div>
 
-          <div class="project-item">
-            <img src="./images/DeityExcidium.png" alt="Deity Excidium" class="project-item__image" style="height: 185px; width: 100%; object-fit: cover;" />
-            <h3>Deity Excidium</h3>
-            <p>Explore different worlds and dimensions and take down their rulers in this thrilling Action RPG!</p>
-            <a href="deity-excidium.html" class="link__text">View Details <span>&rarr;</span></a>
+        <!-- GAME JAMS -->
+        <div class="projects-category">
+          <h2 class="projects-category__title">Game Jams</h2>
+          <div class="projects-category__list">
+
+            <a href="obesidean.html" class="project-list-card">
+              <div class="project-list-card__image-wrap">
+                <img src="./images/obesideancover.png" alt="Obesidean" />
+                <div class="project-list-card__overlay"><span>View Project &rarr;</span></div>
+              </div>
+              <div class="project-list-card__info">
+                <h3>Obesidean</h3>
+                <p>Made for the annual GDSA Fall GD Game Jam 2025! Defend your Subway counter from incoming flash mobs!</p>
+                <p class="project-list-card__tags">Design &bull; Programming &bull; Unity</p>
+              </div>
+            </a>
+
+            <a href="corpse-climber.html" class="project-list-card">
+              <div class="project-list-card__image-wrap">
+                <img src="./images/CORPSE CLIMBER.png" alt="Corpse Climber" />
+                <div class="project-list-card__overlay"><span>View Project &rarr;</span></div>
+              </div>
+              <div class="project-list-card__info">
+                <h3>Corpse Climber</h3>
+                <p>Made for the Jamsepticeye Game Jam! Use your body to climb to the top of the mountain to get home!</p>
+                <p class="project-list-card__tags">Game Design &bull; Programming &bull; Prototyping</p>
+              </div>
+            </a>
+
+            <a href="germ-jam.html" class="project-list-card">
+              <div class="project-list-card__image-wrap">
+                <img src="./images/GermJam.png" alt="Germ Jam" />
+                <div class="project-list-card__overlay"><span>View Project &rarr;</span></div>
+              </div>
+              <div class="project-list-card__info">
+                <h3>Germ Jam</h3>
+                <p>Outlast your fellow germs as you avoid being squashed!</p>
+                <p class="project-list-card__tags">Game Design &bull; Programming</p>
+              </div>
+            </a>
+
+            <a href="labble.html" class="project-list-card">
+              <div class="project-list-card__image-wrap">
+                <img src="./images/Labble.png" alt="Labble" />
+                <div class="project-list-card__overlay"><span>View Project &rarr;</span></div>
+              </div>
+              <div class="project-list-card__info">
+                <h3>Labble</h3>
+                <p>Trapped in your own lab! Escape using your invincible bubble technology in this physics-based platformer!</p>
+                <p class="project-list-card__tags">Level Design &bull; Mechanics Design &bull; Programming</p>
+              </div>
+            </a>
+
+            <a href="godobesideanzilla.html" class="project-list-card">
+              <div class="project-list-card__image-wrap">
+                <img src="./images/Godobesideanzilla.png" alt="Godobesideanzilla" />
+                <div class="project-list-card__overlay"><span>View Project &rarr;</span></div>
+              </div>
+              <div class="project-list-card__info">
+                <h3>Godobesideanzilla</h3>
+                <p>Coming soon.</p>
+                <p class="project-list-card__tags">Game Design &bull; Programming</p>
+              </div>
+            </a>
+
+            <a href="dougmcmillons-sacrifice.html" class="project-list-card">
+              <div class="project-list-card__image-wrap">
+                <img src="./images/DougMcMillonsSacrifice.png" alt="Doug McMillon's Sacrifice" />
+                <div class="project-list-card__overlay"><span>View Project &rarr;</span></div>
+              </div>
+              <div class="project-list-card__info">
+                <h3>Doug McMillon's Sacrifice</h3>
+                <p>Coming soon.</p>
+                <p class="project-list-card__tags">Game Design &bull; Programming</p>
+              </div>
+            </a>
+
           </div>
+        </div>
 
-          <div class="project-item">
-            <img src="./images/GermJam.png" alt="Germ Jam" class="project-item__image" style="height: 185px; width: 100%; object-fit: cover;" />
-            <h3>Germ Jam</h3>
-            <p>Outlast your fellow germs as you avoid being squashed!</p>
-            <a href="germ-jam.html" class="link__text">View Details <span>&rarr;</span></a>
+        <!-- SCHOOL ASSIGNMENTS -->
+        <div class="projects-category">
+          <h2 class="projects-category__title">School Assignments</h2>
+          <div class="projects-category__list">
+
+            <a href="kirby-requite.html" class="project-list-card">
+              <div class="project-list-card__image-wrap">
+                <img src="./images/kirby.png" alt="Kirby: Requite of the Whispy Woods" />
+                <div class="project-list-card__overlay"><span>View Project &rarr;</span></div>
+              </div>
+              <div class="project-list-card__info">
+                <h3>Kirby: Requite of the Whispy Woods</h3>
+                <p>Battle against the iconic Whispy Woods! Face the newly created Jagged Woods!</p>
+                <p class="project-list-card__tags">Boss Design &bull; Game Design &bull; Programming</p>
+              </div>
+            </a>
+
+            <a href="out-of-mind.html" class="project-list-card">
+              <div class="project-list-card__image-wrap">
+                <img src="./images/OutofMind.png" alt="Out of Mind" />
+                <div class="project-list-card__overlay"><span>View Project &rarr;</span></div>
+              </div>
+              <div class="project-list-card__info">
+                <h3>Out of Mind</h3>
+                <p>Clean up your room and solve the puzzles before your mind wears itself out!</p>
+                <p class="project-list-card__tags">Puzzle Design &bull; Programming</p>
+              </div>
+            </a>
+
+            <a href="bidens-brawlers.html" class="project-list-card">
+              <div class="project-list-card__image-wrap">
+                <img src="./images/BidensBrawlers.png" alt="Biden's Brawlers" />
+                <div class="project-list-card__overlay"><span>View Project &rarr;</span></div>
+              </div>
+              <div class="project-list-card__info">
+                <h3>Biden's Brawlers</h3>
+                <p>Coming soon.</p>
+                <p class="project-list-card__tags">Game Design &bull; Programming</p>
+              </div>
+            </a>
+
+            <a href="sharpshooter.html" class="project-list-card">
+              <div class="project-list-card__image-wrap">
+                <img src="./images/Sharpshooter.png" alt="Sharpshooter" />
+                <div class="project-list-card__overlay"><span>View Project &rarr;</span></div>
+              </div>
+              <div class="project-list-card__info">
+                <h3>Sharpshooter</h3>
+                <p>Coming soon.</p>
+                <p class="project-list-card__tags">Game Design &bull; Programming</p>
+              </div>
+            </a>
+
+            <a href="arms-race.html" class="project-list-card">
+              <div class="project-list-card__image-wrap">
+                <img src="./images/ArmsRace.png" alt="Arms Race!" />
+                <div class="project-list-card__overlay"><span>View Project &rarr;</span></div>
+              </div>
+              <div class="project-list-card__info">
+                <h3>Arms Race!</h3>
+                <p>Coming soon.</p>
+                <p class="project-list-card__tags">Game Design &bull; Programming</p>
+              </div>
+            </a>
+
           </div>
-
-          <div class="project-item">
-            <img src="./images/kirby.png" alt="Kirby: Requite of the Whispy Woods" class="project-item__image" style="height: 185px; width: 100%; object-fit: cover;" />
-            <h3>Kirby: Requite of the Whispy Woods</h3>
-            <p>Battle against the iconic Whispy Woods!Face the newly created Jagged Woods!</p>
-            <a href="kirby-requite.html" class="link__text">View Details <span>&rarr;</span></a>
-          </div>
-
-          <div class="project-item">
-            <img src="./images/Labble.png" alt="Labble" class="project-item__image" style="height: 185px; width: 100%; object-fit: cover;" />
-            <h3>Labble</h3>
-            <p>Trapped in your own lab! Try to escape utilizing your invincible bubble technology in this physics-based platformer!</p>
-            <a href="labble.html" class="link__text">View Details <span>&rarr;</span></a>
-          </div>
-
-          <div class="project-item">
-            <img src="./images/Mugshot.png" alt="Mugshot" class="project-item__image" style="height: 185px; width: 100%; object-fit: cover;" />
-            <h3>Mugshot</h3>
-            <p>To avoid being incinerated, you must sneak around the office, using anything at your dispersal to fight back and stay hidden. Find & destroy your boss's prized mugs to track him down and seek your revenge!</p>
-            <a href="mugshot.html" class="link__text">View Details <span>&rarr;</span></a>
-          </div>
-
-          <div class="project-item">
-            <img src="./images/obesideancover.png" alt="Obesidean" class="project-item__image" style="height: 185px; width: 100%; object-fit: cover;" />
-            <h3>Obesidean</h3>
-            <p>Made for the annual GDSA Fall GD Game Jam 2025! Welcome to your new 9-to-9 shift at Subway!</p>
-            <a href="obesidean.html" class="link__text">View Details <span>&rarr;</span></a>
-          </div>
-
-          <div class="project-item">
-            <img src="./images/OutofMind.png" alt="Out of Mind" class="project-item__image" style="height: 185px; width: 100%; object-fit: cover;" />
-            <h3>Out of Mind</h3>
-            <p>Clean up your room and solve the puzzles before your mind wears itself out!</p>
-            <a href="out-of-mind.html" class="link__text">View Details <span>&rarr;</span></a>
-          </div>
-
-          <div class="project-item">
-            <img src="./images/project-2.png" alt="Trisoul Tower" class="project-item__image" style="height: 185px; width: 100%; object-fit: cover;" />
-            <h3>Trisoul Tower</h3>
-            <p>Action-packed, fast-paced hack & slash showcasing inspired, flamboyant combo mechanics with flashy and challenging enemies.</p>
-            <a href="trisoul-tower.html" class="link__text">View Details <span>&rarr;</span></a>
-          </div>
-
-          <div class="project-item">
-            <img src="./images/Universus.png" alt="Universus" class="project-item__image" style="height: 185px; width: 100%; object-fit: cover;" />
-            <h3>Universus</h3>
-            <p>An auto battler simulation for Ontario Tech University and Durham College in conjunction with Full Circle CS. Battle it out!</p>
-            <a href="universus.html" class="link__text">View Details <span>&rarr;</span></a>
-          </div>
-
         </div>
 
         <div class="view-all-projects-container">
-          <a href="index.html#work" class="btn">Back to Featured Projects</a>
+          <a href="index.html" class="btn btn--pink">Back to Home</a>
         </div>
+
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="row">
-      <p>&copy; 2025 - Dean Satine | Systems & Character Designer</p>
+      <p>&copy; 2026 – Dean Satine | Systems &amp; Gameplay Designer</p>
     </div>
   </footer>
 

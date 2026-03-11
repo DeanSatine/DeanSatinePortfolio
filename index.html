@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 
-  <title>Dean Satine | Systems & Character Designer</title>
+  <title>Dean Satine | Systems & Gameplay Designer</title>
 
-  <meta name="description" content="Systems & Character Designer">
+  <meta name="description" content="Systems & Gameplay Designer">
   <meta name="keywords" content="systems design, character design, game design, UX design, interactive systems" />
   <link rel="stylesheet" href="index.css" />
 </head>
@@ -16,170 +16,97 @@
 <body>
 
   <header class="header" role="banner" id="top">
-    <div class="row header__row">
 
-      <nav class="nav nav__panel" role="navigation">
-        <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
-          <li class="nav__item"><a href="#clients" class="nav__link">Collaborations</a></li>
-          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-        </ul>
-
-        <div class="nav__socials">
-          <a href="https://x.com/deansatine" target="_blank">
-            <img src="./images/twitter.svg" alt="Twitter" class="nav__social-icon">
-          </a>
-
-          <a href="https://www.linkedin.com/in/dean-satine-881949300/" target="_blank">
-            <img src="./images/linkedin.svg" alt="LinkedIn" class="nav__social-icon">
-          </a>
-
-          <a href="https://www.instagram.com/dens.ig/" target="_blank">
-            <img src="./images/instagram.png" alt="Instagram" class="nav__social-icon">
-          </a>
-
-          <a href="https://www.youtube.com/@DeanSatine" target="_blank">
-            <img src="./images/Youtube.png" alt="YouTube" class="nav__social-icon">
-          </a>
-        </div>
-      </nav>
-    </div>
-
-    <div class="header__text-box row">
-      <div class="header__text">
-        <h1 class="heading-primary">
-          <span>Dean Satine</span>
-        </h1>
-        <p>Systems & Character Designer</p>
-        <a href="#work" class="btn btn--pink">Check out my work!</a>
+    <nav class="nav nav__panel" role="navigation">
+      <ul class="nav__items">
+        <li class="nav__item"><a href="#clients" class="nav__link">Collaborations</a></li>
+        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__socials">
+        <a href="https://x.com/deansatine" target="_blank">
+          <img src="./images/twitter.svg" alt="Twitter" class="nav__social-icon">
+        </a>
+        <a href="https://www.linkedin.com/in/dean-satine-881949300/" target="_blank">
+          <img src="./images/linkedin.svg" alt="LinkedIn" class="nav__social-icon">
+        </a>
+        <a href="https://www.instagram.com/dens.ig/" target="_blank">
+          <img src="./images/instagram.png" alt="Instagram" class="nav__social-icon">
+        </a>
+        <a href="https://www.youtube.com/@DeanSatine" target="_blank">
+          <img src="./images/Youtube.png" alt="YouTube" class="nav__social-icon">
+        </a>
       </div>
-    </div>
-  </header>
+    </nav>
 
-  <main role="main">
-    <section class="work" id="work">
-      <div class="row">
-        <h2>Featured Projects</h2>
-        <div class="work__boxes">
+    <div class="header__hero row">
+      <div class="header__identity">
+        <img src="./images/DeanSatineLogo.png" alt="Dean Satine Logo" class="header__logo" />
+        <h1 class="heading-primary">Dean Satine</h1>
+        <p class="header__subtitle">Systems &amp; Gameplay Designer</p>
+      </div>
 
-          <!-- CYBERNETIC STRATEGY -->
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Cybernetic Strategy</h3>
-              <p>
-                Auto Battler prototype created to demonstrate my understanding and knowledge of Teamfight Tactics' Unit & Trait Design.
-              </p>
-              <ul class="work__list">
-                <li>1-Cost Design</li>
-                <li>2-Cost Design</li>
-                <li>2 3-Cost Designs</li>
-                <li>4-Cost Design</li>
-                <li>5-Cost Design</li>
-                <li>2 Origin Designs</li>
-                <li>2 Class Designs</li>
-                <li>3 Augment Designs</li>
-              </ul>
-              <div class="work__links">
-                <div class="link-group">
-                  <a href="cybernetic-strategy.html" class="link__text">View Project <span>&rarr;</span></a>
-                  <div class="design-doc-with-github">
-                    <a href="https://docs.google.com/document/d/1PyTKcgesv_ESwfhLt4qpjPUFTD4Jp4jF7wqHc1-l2EE/edit?tab=t.0"
-                       target="_blank" class="link__text">View Design Doc <span>&rarr;</span></a>
-                    <a href="https://github.com/DeanSatine/CyberneticStrategy" target="_blank">
-                      <img src="./images/github.svg" class="work__code" alt="Cybernetic Strategy Repository">
-                    </a>
-                  </div>
-                </div>
+      <div class="header__featured" id="work">
+        <h2 class="header__featured-label">Featured Projects</h2>
+        <div class="featured-projects__grid">
+
+          <!-- UNITY BRAWL -->
+          <div class="featured-card-wrap">
+            <a href="unity-brawl.html" class="featured-card">
+              <div class="featured-card__image-wrap">
+                <img src="./images/UnityBrawlIcon.png" alt="Unity Brawl" />
+                <div class="featured-card__overlay"><span>View Project &rarr;</span></div>
               </div>
-            </div>
-
-            <div class="work__image-box">
-              <img src="./images/project-1.png" class="work__image" alt="Cybernetic Strategy project image" />
-
-              <!-- DEVLOG CTA BUTTON (NEW) -->
-              <a
-                href="https://www.youtube.com/@DeanSatine/shorts"
-                target="_blank"
-                class="devlog-cta"
-              >
-                Currently in Progress!
-                <span>Check out development logs here!</span>
-              </a>
-            </div>
+              <div class="featured-card__info">
+                <h3>Unity Brawl</h3>
+                <p>An activity made for high schoolers to have fun using a game engine for the first time!</p>
+              </div>
+            </a>
+            <p class="featured-card__tags">Design &bull; Programming &bull; Prototyping</p>
           </div>
 
-          <!-- OBESIDEAN -->
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Obesidean</h3>
-              <p>
-                Made for the annual GDSA Fall GD Game Jam 2025! Defend your counter at Subway from incoming flash mobs with your strange sandwich-summoning powers.
-              </p>
-              <ul class="work__list">
-                <li>Mentored a 1st year designer</li>
-                <li>Fully programmed & implemented in Unity</li>
-                <li>Fast-paced comedic arcade survival gameplay</li>
-              </ul>
-
-              <div class="work__links">
-                <div class="link-group">
-                  <a href="obesidean.html" class="link__text">View Project <span>&rarr;</span></a>
-                  <div class="design-doc-with-github">
-                    <a href="https://docs.google.com/document/d/1TU9Jqloy-SeS3JBaJQGAU4wTJCM9fpd9qepZNy44x2E/edit?tab=t.0"
-                       target="_blank" class="link__text">View Design Doc <span>&rarr;</span></a>
-                    <a href="https://github.com/DeanSatine/Obesidean" target="_blank">
-                      <img src="./images/github.svg" class="work__code" alt="Obesidean Repository">
-                    </a>
-                  </div>
-                </div>
+          <!-- CYBERNETIC STRATEGY (centre) -->
+          <div class="featured-card-wrap">
+            <a href="cybernetic-strategy.html" class="featured-card">
+              <div class="featured-card__image-wrap">
+                <img src="./images/project-1.png" alt="Cybernetic Strategy" />
+                <div class="featured-card__overlay"><span>View Project &rarr;</span></div>
               </div>
-            </div>
-
-            <div class="work__image-box">
-              <img src="./images/obesideancover.png" class="work__image" alt="Obesidean project image" />
-            </div>
+              <div class="featured-card__info">
+                <h3>Cybernetic Strategy</h3>
+                <p>Auto Battler prototype demonstrating Teamfight Tactics' Unit &amp; Trait Design.</p>
+                <span class="featured-card__badge">⚡ In Progress</span>
+              </div>
+            </a>
+            <p class="featured-card__tags">Game Creator &bull; Game Design &bull; Programming</p>
           </div>
 
           <!-- UNIVERSUS -->
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Universus</h3>
-              <p>
-                An auto battler simulation for Ontario Tech University and Durham College in conjunction with Full Circle CS. Battle it out!
-              </p>
-              <ul class="work__list">
-                <li>Combat System Designer</li>
-                <li>Unit Designer</li>
-                <li>Score System Designer</li>
-              </ul>
-              <div class="work__links">
-                <div class="link-group">
-                  <a href="universus.html" class="link__text">View Project <span>&rarr;</span></a>
-                  <div class="design-doc-with-github">
-                    <a href="https://docs.google.com/document/d/1ugOlanVgMFIzNKgggH3pRcAoMdt8o6WsdZYCGFxuvgo/edit?tab=t.0#heading=h.4lfdz5m9lug3"
-                       target="_blank" class="link__text">View Design Doc <span>&rarr;</span></a>
-                    <a href="#" target="_blank">
-                      <img src="./images/github.svg" class="work__code" alt="Universus Repository">
-                    </a>
-                  </div>
-                </div>
+          <div class="featured-card-wrap">
+            <a href="universus.html" class="featured-card">
+              <div class="featured-card__image-wrap">
+                <img src="./images/Universus.png" alt="Universus" />
+                <div class="featured-card__overlay"><span>View Project &rarr;</span></div>
               </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/Universus.png" class="work__image" alt="Universus project image" />
-            </div>
+              <div class="featured-card__info">
+                <h3>Universus</h3>
+                <p>Auto battler simulation for Ontario Tech &amp; Durham College in conjunction with Full Circle CS.</p>
+              </div>
+            </a>
+            <p class="featured-card__tags">Combat Design &bull; Systems Design &bull; Prototyping</p>
           </div>
 
         </div>
-      </div>
 
-      <div class="row">
         <div class="view-all-projects-container">
           <a href="projects.html" class="btn btn--pink">View All Projects</a>
         </div>
       </div>
-    </section>
+    </div>
+
+  </header>
+
+  <main role="main">
 
     <section class="client" id="clients">
       <div class="row">
@@ -192,11 +119,13 @@
       </div>
     </section>
 
-    <section class="about" id="about">
+    <section class="about-contact" id="about">
       <div class="row">
-        <h2>About Me</h2>
-        <div class="about__content">
-          <div class="about__text">
+        <div class="about-contact__row">
+          <div class="about-contact__about">
+            <h2>About Me</h2>
+            <div class="about__content">
+              <div class="about__text">
             <p>
               Hey! I'm a systems and character designer who's incredibly passionate about creation with constraints.
               I love to make cool designs with as small as a scope as possible. I love socializing and working with others,
@@ -210,27 +139,28 @@
               the Game Development Student Association! I hope you're liking what you see!
             </p>
             <a href="Dean Satine Resume.pdf" class="btn" target="_blank">View Resume</a>
+              </div>
+              <div class="about__photo-container">
+                <img class="about__photo" src="./images/dean-satine.webp" alt="Dean Satine portrait" />
+              </div>
+            </div>
           </div>
-          <div class="about__photo-container">
-            <img class="about__photo" src="./images/dean-satine.webp" alt="Dean Satine portrait" />
+
+          <div class="about-contact__contact" id="contact">
+            <h2>Contact Me!</h2>
+            <div class="contact__info">
+              <p>
+                Interested in my work or have any questions? I would love to talk about anything, anytime!
+                Please reach out to me via email, or any of my social media!
+              </p>
+              <a href="mailto:satinedean@gmail.com" class="btn">satinedean@gmail.com</a>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
   </main>
-
-  <section class="contact" id="contact">
-    <div class="row">
-      <h2>Contact Me!</h2>
-      <div class="contact__info">
-        <p>
-          Interested in my work or have any questions? I would love to talk about anything, anytime!
-          Please reach out to me via email, or any of my social media!
-        </p>
-        <a href="mailto:satinedean@gmail.com" class="btn">satinedean@gmail.com</a>
-      </div>
-    </div>
-  </section>
 
   <footer role="contentinfo" class="footer">
     <div class="row">
@@ -239,14 +169,4 @@
         <li><a href="https://www.instagram.com/dens.ig/" target="_blank"><img src="./images/instagram.png" alt="Instagram" class="footer__social-image"></a></li>
         <li><a href="https://www.linkedin.com/in/dean-satine-881949300/" target="_blank"><img src="./images/linkedin.svg" alt="LinkedIn" class="footer__social-image"></a></li>
       </ul>
-      <p>&copy; 2026 – Dean Satine | Systems & Character Designer</p>
-    </div>
-  </footer>
-
-  <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image" />
-  </a>
-
-  <script src="./index.js"></script>
-</body>
-</html>
+      <p>&copy; 2026 - Dean Satine
