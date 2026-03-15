@@ -7,108 +7,77 @@
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
   <link rel="stylesheet" href="index.css" />
   <title>Mugshot | Dean Satine</title>
-  <meta name="description" content="Mugshot project details by Dean Satine, systems and character designer.">
-  <style>
-    .project-details__screenshots-grid img {
-      cursor: pointer;
-      transition: transform 0.2s ease-in-out;
-    }
-    .project-details__screenshots-grid img:hover {
-      transform: scale(1.05);
-    }
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.9);
-      justify-content: center;
-      align-items: center;
-    }
-    .lightbox.active {
-      display: flex;
-    }
-    .lightbox-content {
-      margin: auto;
-      display: block;
-      max-width: 80%;
-      max-height: 80%;
-      animation-name: zoom;
-      animation-duration: 0.4s;
-    }
-    @keyframes zoom {
-      from {transform: scale(0.1)}
-      to {transform: scale(1)}
-    }
-    .lightbox-close {
-      position: absolute;
-      top: 15px;
-      right: 35px;
-      color: #f1f1f1;
-      font-size: 40px;
-      font-weight: bold;
-      transition: 0.3s;
-      cursor: pointer;
-    }
-    .lightbox-close:hover, .lightbox-close:focus {
-      color: #bbb;
-      text-decoration: none;
-    }
-  </style>
+  <meta name="description" content="Mugshot — project details by Dean Satine, systems and gameplay designer.">
 </head>
 
 <body>
+
   <header class="project-header">
     <h1 class="heading-primary project-header__title">Mugshot</h1>
-    <img src="./images/Mugshot.png" alt="Mugshot Header" class="project-header__image">
+    <img src="./images/Mugshot.png" alt="Mugshot" class="project-header__image">
     <div class="view-all-projects-container">
       <a href="https://deansatine.itch.io/mugshot" target="_blank" class="btn btn--pink">Check out on Itch.io</a>
     </div>
   </header>
+
   <main role="main">
-    <section class="project-details">
-      <div class="row project-details__container">
-        <div class="project-details__media-row">
-          <div class="project-details__media">
-            <h2>Gameplay Video</h2>
-            <iframe width="800" height="450" src="https://www.youtube.com/embed/xTqk4pAHmWk" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="project-details__screenshots">
-            <h2>Screenshots</h2>
-            <div class="project-details__screenshots-grid">
-              <img src="./images/mugshot-screen1.png" alt="Mugshot Screenshot 1">
-              <img src="./images/mugshot-screen2.png" alt="Mugshot Screenshot 2">
-              <img src="./images/mugshot-screen3.png" alt="Mugshot Screenshot 3">
-            </div>
-          </div>
-        </div>
-        <div class="project-details__split">
-          <div class="project-details__text">
+    <section class="project-details project-body">
+      <div class="row">
+
+        <!-- ── TOP: About + Responsibilities ── -->
+        <div class="project-body__top">
+          <div class="project-body__about">
             <h2>About the Project</h2>
-            <p>Play as a blue-collared wagie in a world full of cats & dogs.. except you’re getting fired.. Literally. To avoid being incinerated, you must sneak around the office, using anything at your dispersal to fight back and stay hidden. Find & destroy your boss's prized mugs around the office to track him down and seek your revenge!<br><br>Created as a 2nd Year Game for Gamecon at Ontario Tech University</p>
+            <p>Play as a blue-collared wagie in a world full of cats &amp; dogs — except you're getting fired. Literally. To avoid being incinerated, you must sneak around the office, using anything at your disposal to fight back and stay hidden. Find &amp; destroy your boss's prized mugs around the office to track him down and seek your revenge!</p>
+            <p>Created as a 2nd Year Game for Gamecon at Ontario Tech University.</p>
           </div>
-          <div class="project-details__responsibilities">
+          <div class="project-body__responsibilities">
             <h2>My Responsibilities</h2>
             <ul>
               <li>Led a team of 6 people</li>
               <li>Designed 10 unique weapons</li>
-              <li>Designed progression & mug system</li>
+              <li>Designed progression &amp; mug system</li>
               <li>Created various prop 3D models</li>
             </ul>
           </div>
         </div>
-      </div>
-      <div class="view-all-projects-container">
-        <a href="projects.html" class="btn">Back to All Projects</a>
+
+        <!-- ── MEDIA: Video + Gallery ── -->
+        <div class="project-body__media">
+          <div class="project-body__video">
+            <h2>Gameplay Video</h2>
+            <iframe src="https://www.youtube.com/embed/xTqk4pAHmWk" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="project-body__gallery-section">
+            <h2>Screenshots</h2>
+            <div class="project-body__gallery">
+              <div class="project-body__gallery-item" data-num="1">
+                <img src="./images/mugshot-screen1.png" alt="Mugshot Screenshot 1">
+                <div class="project-body__gallery-overlay"><span>View ↗</span></div>
+              </div>
+              <div class="project-body__gallery-item" data-num="2">
+                <img src="./images/mugshot-screen2.png" alt="Mugshot Screenshot 2">
+                <div class="project-body__gallery-overlay"><span>View ↗</span></div>
+              </div>
+              <div class="project-body__gallery-item" data-num="3">
+                <img src="./images/mugshot-screen3.png" alt="Mugshot Screenshot 3">
+                <div class="project-body__gallery-overlay"><span>View ↗</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-body__back">
+          <a href="projects.html" class="btn">&larr; Back to All Projects</a>
+        </div>
+
       </div>
     </section>
   </main>
+
   <footer class="footer">
     <div class="row">
-      <p>&copy; 2025 - Dean Satine | Systems & Character Designer</p>
+      <p>&copy; 2026 &ndash; Dean Satine | Systems &amp; Gameplay Designer</p>
     </div>
   </footer>
 
@@ -118,31 +87,25 @@
   </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const lightbox = document.getElementById('lightbox');
-      if (!lightbox) return;
-      const lightboxImg = document.getElementById('lightbox-img');
-      const closeBtn = document.querySelector('.lightbox-close');
-      const screenshots = document.querySelectorAll('.project-details__screenshots-grid img');
+    document.addEventListener('DOMContentLoaded', function () {
+      const lb    = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightbox-img');
+      const close = document.querySelector('.lightbox-close');
+      if (!lb) return;
 
-      screenshots.forEach(image => {
-        image.addEventListener('click', () => {
-          lightbox.classList.add('active');
-          lightboxImg.src = image.src;
+      document.querySelectorAll('.project-body__gallery-item').forEach(item => {
+        item.addEventListener('click', () => {
+          lbImg.src = item.querySelector('img').src;
+          lb.classList.add('active');
         });
       });
 
-      const closeLightbox = () => {
-        lightbox.classList.remove('active');
-      };
-
-      closeBtn.addEventListener('click', closeLightbox);
-      lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-          closeLightbox();
-        }
-      });
+      const closeLb = () => lb.classList.remove('active');
+      close.addEventListener('click', closeLb);
+      lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
     });
   </script>
+
 </body>
 </html>

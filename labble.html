@@ -7,90 +7,30 @@
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
   <link rel="stylesheet" href="index.css" />
   <title>Labble | Dean Satine</title>
-  <meta name="description" content="Labble project details by Dean Satine, systems and character designer.">
-  <style>
-    .project-details__screenshots-grid img {
-      cursor: pointer;
-      transition: transform 0.2s ease-in-out;
-    }
-    .project-details__screenshots-grid img:hover {
-      transform: scale(1.05);
-    }
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.9);
-      justify-content: center;
-      align-items: center;
-    }
-    .lightbox.active {
-      display: flex;
-    }
-    .lightbox-content {
-      margin: auto;
-      display: block;
-      max-width: 80%;
-      max-height: 80%;
-      animation-name: zoom;
-      animation-duration: 0.4s;
-    }
-    @keyframes zoom {
-      from {transform: scale(0.1)}
-      to {transform: scale(1)}
-    }
-    .lightbox-close {
-      position: absolute;
-      top: 15px;
-      right: 35px;
-      color: #f1f1f1;
-      font-size: 40px;
-      font-weight: bold;
-      transition: 0.3s;
-      cursor: pointer;
-    }
-    .lightbox-close:hover, .lightbox-close:focus {
-      color: #bbb;
-      text-decoration: none;
-    }
-  </style>
+  <meta name="description" content="Labble — project details by Dean Satine, systems and gameplay designer.">
 </head>
 
 <body>
+
   <header class="project-header">
     <h1 class="heading-primary project-header__title">Labble</h1>
-    <img src="./images/Labble.png" alt="Labble Header" class="project-header__image">
+    <img src="./images/Labble.png" alt="Labble" class="project-header__image">
     <div class="view-all-projects-container">
       <a href="https://deansatine.itch.io/labble" target="_blank" class="btn btn--pink">Check out on Itch.io</a>
     </div>
   </header>
+
   <main role="main">
-    <section class="project-details">
-      <div class="row project-details__container">
-        <div class="project-details__media-row">
-          <div class="project-details__media">
-            <h2>Gameplay Video</h2>
-            <iframe width="800" height="450" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="project-details__screenshots">
-            <h2>Screenshots</h2>
-            <div class="project-details__screenshots-grid">
-              <img src="./images/labble-screen1.png" alt="Labble Screenshot 1">
-              <img src="./images/labble-screen2.png" alt="Labble Screenshot 2">
-              <img src="./images/labble-screen3.png" alt="Labble Screenshot 3">
-            </div>
-          </div>
-        </div>
-        <div class="project-details__split">
-          <div class="project-details__text">
+    <section class="project-details project-body">
+      <div class="row">
+
+        <!-- ── TOP: About + Responsibilities ── -->
+        <div class="project-body__top">
+          <div class="project-body__about">
             <h2>About the Project</h2>
             <p>Trapped in your own lab! Escape using your invincible bubble technology in this physics-based platformer!</p>
           </div>
-          <div class="project-details__responsibilities">
+          <div class="project-body__responsibilities">
             <h2>My Responsibilities</h2>
             <ul>
               <li>Bubble mechanics and puzzle progression</li>
@@ -99,15 +39,43 @@
             </ul>
           </div>
         </div>
-      </div>
-      <div class="view-all-projects-container">
-        <a href="projects.html" class="btn">Back to All Projects</a>
+
+        <!-- ── MEDIA: Video + Gallery ── -->
+        <div class="project-body__media">
+          <div class="project-body__video">
+            <h2>Gameplay Video</h2>
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="project-body__gallery-section">
+            <h2>Screenshots</h2>
+            <div class="project-body__gallery">
+              <div class="project-body__gallery-item" data-num="1">
+                <img src="./images/labble-screen1.png" alt="Labble Screenshot 1">
+                <div class="project-body__gallery-overlay"><span>View ↗</span></div>
+              </div>
+              <div class="project-body__gallery-item" data-num="2">
+                <img src="./images/labble-screen2.png" alt="Labble Screenshot 2">
+                <div class="project-body__gallery-overlay"><span>View ↗</span></div>
+              </div>
+              <div class="project-body__gallery-item" data-num="3">
+                <img src="./images/labble-screen3.png" alt="Labble Screenshot 3">
+                <div class="project-body__gallery-overlay"><span>View ↗</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-body__back">
+          <a href="projects.html" class="btn">&larr; Back to All Projects</a>
+        </div>
+
       </div>
     </section>
   </main>
+
   <footer class="footer">
     <div class="row">
-      <p>&copy; 2025 - Dean Satine | Systems & Character Designer</p>
+      <p>&copy; 2026 &ndash; Dean Satine | Systems &amp; Gameplay Designer</p>
     </div>
   </footer>
 
@@ -117,31 +85,25 @@
   </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const lightbox = document.getElementById('lightbox');
-      if (!lightbox) return;
-      const lightboxImg = document.getElementById('lightbox-img');
-      const closeBtn = document.querySelector('.lightbox-close');
-      const screenshots = document.querySelectorAll('.project-details__screenshots-grid img');
+    document.addEventListener('DOMContentLoaded', function () {
+      const lb    = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightbox-img');
+      const close = document.querySelector('.lightbox-close');
+      if (!lb) return;
 
-      screenshots.forEach(image => {
-        image.addEventListener('click', () => {
-          lightbox.classList.add('active');
-          lightboxImg.src = image.src;
+      document.querySelectorAll('.project-body__gallery-item').forEach(item => {
+        item.addEventListener('click', () => {
+          lbImg.src = item.querySelector('img').src;
+          lb.classList.add('active');
         });
       });
 
-      const closeLightbox = () => {
-        lightbox.classList.remove('active');
-      };
-
-      closeBtn.addEventListener('click', closeLightbox);
-      lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-          closeLightbox();
-        }
-      });
+      const closeLb = () => lb.classList.remove('active');
+      close.addEventListener('click', closeLb);
+      lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
     });
   </script>
+
 </body>
 </html>
