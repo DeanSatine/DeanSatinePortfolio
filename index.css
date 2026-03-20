@@ -1205,8 +1205,27 @@ section.about-contact {
 }
 
 .project-header {
+  position: relative;
   padding: var(--gutter-medium) 0 var(--gutter-small);
   margin-bottom: 0;
+}
+
+.project-header__logo-link {
+  position: fixed;
+  top: 2rem;
+  left: 2.5rem;
+  z-index: 1000;
+  display: block;
+  transition: opacity 0.2s ease;
+}
+
+.project-header__logo-link:hover {
+  opacity: 0.75;
+}
+
+.project-header__logo {
+  width: 5.5rem;
+  height: auto;
 }
 
 .project-header__title {
