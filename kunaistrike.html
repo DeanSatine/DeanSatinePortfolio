@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+  <link rel="stylesheet" href="index.css" />
+  <title>Kunai Strike | Dean Satine</title>
+  <meta name="description" content="Kunai Strike — project details by Dean Satine, systems and gameplay designer.">
+</head>
+
+<body>
+
+  <header class="project-header">
+    <a href="index.html" class="project-header__logo-link">
+      <img src="./images/DeanSatineLogo.png" alt="Dean Satine" class="project-header__logo">
+    </a>
+    <h1 class="heading-primary project-header__title">Kunai Strike</h1>
+    <img src="./images/KunaiStrikeIcon.png" alt="Kunai Strike" class="project-header__image">
+    <div class="view-all-projects-container">
+      <a href="https://deansatine.itch.io/kunai-strike" target="_blank" class="btn btn--pink">Check out on Itch.io</a>
+    </div>
+  </header>
+
+  <main role="main">
+    <section class="project-details project-body">
+      <div class="row">
+
+        <!-- ── TOP: About + Responsibilities ── -->
+        <div class="project-body__top">
+          <div class="project-body__about">
+            <h2>About the Project</h2>
+            <p><strong>Cut Down all Ninjas!</strong></p>
+            <p>Become the Master Ninja! Using your ability to slow time and throw a single bouncing kunai, eliminate all enemy ninjas as they become more vicious over time. Not to fret, as you become stronger with your augments, how long can you last?</p>
+          </div>
+          <div class="project-body__responsibilities">
+            <h2>My Responsibilities</h2>
+            <ul>
+              <li>As a mentor, taught a 1st year game designer to create a low-scoped game loop</li>
+              <li>Programmed &amp; implemented all elements within Unity</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ── MEDIA: Video + Gallery ── -->
+        <div class="project-body__media">
+          <div class="project-body__gallery-section">
+            <h2>Screenshots</h2>
+            <div class="project-body__gallery">
+              <div class="project-body__gallery-item" data-num="1">
+                <img src="./images/KSSS1.png" alt="Kunai Strike Screenshot 1">
+                <div class="project-body__gallery-overlay"><span>View ↗</span></div>
+              </div>
+              <div class="project-body__gallery-item" data-num="2">
+                <img src="./images/KSSS2.png" alt="Kunai Strike Screenshot 2">
+                <div class="project-body__gallery-overlay"><span>View ↗</span></div>
+              </div>
+              <div class="project-body__gallery-item" data-num="3">
+                <img src="./images/KSSS3.png" alt="Kunai Strike Screenshot 3">
+                <div class="project-body__gallery-overlay"><span>View ↗</span></div>
+              </div>
+              <div class="project-body__gallery-item" data-num="4">
+                <img src="./images/KSSS4.png" alt="Kunai Strike Screenshot 4">
+                <div class="project-body__gallery-overlay"><span>View ↗</span></div>
+              </div>
+              <div class="project-body__gallery-item" data-num="5">
+                <img src="./images/KSSS5.png" alt="Kunai Strike Screenshot 5">
+                <div class="project-body__gallery-overlay"><span>View ↗</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-body__back">
+          <a href="projects.html" class="btn">&larr; Back to All Projects</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="row">
+      <p>&copy; 2026 &ndash; Dean Satine | Systems &amp; Gameplay Designer</p>
+    </div>
+  </footer>
+
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const lb    = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightbox-img');
+      const close = document.querySelector('.lightbox-close');
+      if (!lb) return;
+
+      document.querySelectorAll('.project-body__gallery-item').forEach(item => {
+        item.addEventListener('click', () => {
+          lbImg.src = item.querySelector('img').src;
+          lb.classList.add('active');
+        });
+      });
+
+      const closeLb = () => lb.classList.remove('active');
+      close.addEventListener('click', closeLb);
+      lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+    });
+  </script>
+
+</body>
+</html>
