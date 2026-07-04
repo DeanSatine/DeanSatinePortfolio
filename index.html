@@ -13,15 +13,16 @@
   <link rel="stylesheet" href="index.css" />
 </head>
 
-<body>
+<body class="portfolio-home">
+  <div class="site-ambient" aria-hidden="true"><span></span><span></span><span></span></div>
 
   <header class="header" role="banner" id="top">
 
     <nav class="nav nav__panel" role="navigation">
       <ul class="nav__items">
-        <li class="nav__item"><a href="#clients" class="nav__link">Collaborations</a></li>
+        <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
+        <li class="nav__item"><a href="#clients" class="nav__link">Experience</a></li>
         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
       </ul>
       <div class="nav__socials">
         <a href="https://x.com/deansatine" target="_blank">
@@ -40,7 +41,7 @@
     </nav>
 
     <div class="header__hero row">
-      <div class="header__identity">
+      <div class="header__identity reveal-on-scroll">
         <img src="./images/DeanSatineLogo.png" alt="Dean Satine Logo" class="header__logo" />
         <h1 class="heading-primary">Dean Satine</h1>
         <p class="header__subtitle">Systems &amp; Gameplay Designer</p>
@@ -75,7 +76,7 @@
               <div class="featured-card__info">
                 <h3>Cybernetic Strategy</h3>
                 <p>Auto Battler prototype demonstrating Teamfight Tactics' Unit &amp; Trait Design.</p>
-                <span class="featured-card__badge">⚡ In Progress</span>
+                <span class="featured-card__badge">In Progress</span>
               </div>
             </a>
             <p class="featured-card__tags">Game Creator &bull; Game Design &bull; Programming &bull; Unity</p>
@@ -180,5 +181,13 @@
     </section>
   </main>
 
+  <footer class="footer">
+    <div class="row">
+      <p>&copy; 2026 &ndash; Dean Satine | Systems &amp; Gameplay Designer</p>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-to-top" aria-label="Back to top"><img src="./images/arrow-up.svg" alt="" class="back-to-top__image"></a>
+  <script src="index.js"></script>
 </body>
 </html>
