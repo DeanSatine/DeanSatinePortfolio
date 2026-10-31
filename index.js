@@ -1,5 +1,38 @@
 /* Dean Satine portfolio interactions */
 (function () {
+  const addVideo = (source, poster) => {
+    const wrapper = document.createElement('div');
+    wrapper.setAttribute('aria-hidden', 'true');
+
+    const video = document.createElement('video');
+    video.autoplay = true;
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.preload = 'metadata';
+    video.poster = poster;
+
+    const sourceEl = document.createElement('source');
+    sourceEl.src = source;
+    sourceEl.type = 'video/mp4';
+    sourceEl.media = '(min-width: 701px) and (prefers-reduced-motion: no-preference)';
+    video.appendChild(sourceEl);
+    wrapper.appendChild(video);
+    return wrapper;
+  };
+
+  const addPortfolioVideoAtmosphere = () => {
+    const body = document.body;
+    if (!body || (!body.classList.contains('portfolio-home') && !body.classList.contains('project-page'))) return;
+    body.classList.add('video-atmosphere-enabled');
+
+    const background = addVideo('./images/video/space-background.mp4', './images/video/space-background-poster.jpg');
+    background.classList.add('portfolio-video-background');
+    body.prepend(background);
+  };
+
+  addPortfolioVideoAtmosphere();
+
   const handleFirstTab = (e) => {
     if (e.key === 'Tab') {
       document.body.classList.add('user-is-tabbing');
