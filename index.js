@@ -23,7 +23,7 @@
 
   const addPortfolioVideoAtmosphere = () => {
     const body = document.body;
-    if (!body || (!body.classList.contains('portfolio-home') && !body.classList.contains('project-page'))) return;
+    if (!body || (!body.classList.contains('portfolio-home') && !body.classList.contains('project-page') && !body.classList.contains('projects-index'))) return;
     body.classList.add('video-atmosphere-enabled');
 
     const background = addVideo('./images/video/space-background.mp4', './images/video/space-background-poster.jpg');
