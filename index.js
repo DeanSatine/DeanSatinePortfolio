@@ -1,4 +1,4 @@
-/* Dean Satine portfolio interactions */
+
 (function () {
   const addVideo = (source, poster) => {
     const wrapper = document.createElement('div');
@@ -100,8 +100,6 @@
   } else {
     revealTargets.forEach(el => el.classList.add('is-visible'));
   }
-
-  // Small parallax lift on hero background, light enough to stay smooth.
   const header = document.querySelector('.header');
   if (header) {
     window.addEventListener('scroll', () => {

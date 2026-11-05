@@ -1,6 +1,6 @@
-/* --------------------------------------- */
-/* ----- Basic Setup ----- */
-/* --------------------------------------- */
+
+
+
 
 @font-face {
     font-family: 'Caudex';
@@ -16,7 +16,7 @@
     src: url('./fonts/Caudex-Bold.ttf') format('truetype');
 }
 
-/* Legacy fallback references kept for any project sub-pages */
+
 @font-face {
     font-family: 'Hk Grotesk';
     font-style: normal;
@@ -57,7 +57,7 @@
 
     --container-max-width: 1180px;
     --container-normal-width: 800px;
-    --container-medium-width: 700px; 
+    --container-medium-width: 700px;
     --container-small-width: 500px;
 
     --gutter-huge: 12rem;
@@ -70,7 +70,7 @@
 }
 
 html {
-    font-size: 62.5%; /* (16/10)*100 = 62.5% => 1rem = 10px */
+    font-size: 62.5%;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
@@ -130,9 +130,9 @@ img {
     max-width: 100%;
 }
 
-/* --------------------------------------- */
-/* ----- Headlines and Paragraphs ----- */
-/* --------------------------------------- */
+
+
+
 
 h1,
 h2,
@@ -198,14 +198,14 @@ p {
 }
 
 @media(max-width: 900px) {
-    p { 
+    p {
         max-width: var(--container-small-width);
     }
 }
 
-/* --------------------------------------- */
-/* ----- Buttons and Links ----- */
-/* --------------------------------------- */
+
+
+
 
 a {
     color: var(--white);
@@ -317,7 +317,7 @@ body:not(.user-is-tabbing) a:focus {
     font-family: sans-serif;
 }
 
-/* ----- Back to Top ----- */
+
 
 .back-to-top {
     position: fixed;
@@ -351,9 +351,9 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
-/* --------------------------------------- */
-/* ----- Navigation ----- */
-/* --------------------------------------- */
+
+
+
 
 .nav {
   display: flex;
@@ -421,12 +421,12 @@ body:not(.user-is-tabbing) a:focus {
     background: var(--pink);
 }
 
-/* --------------------------------------- */
-/* ----- Header ----- */
-/* --------------------------------------- */
+
+
+
 
 .header {
-    background: linear-gradient(rgba(0,0,0, .15), rgba(0,0,0, .55)), 
+    background: linear-gradient(rgba(0,0,0, .15), rgba(0,0,0, .55)),
         url('./images/header.gif');
     min-height: 100vh;
     background-size: cover;
@@ -505,9 +505,9 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
-/* --------------------------------------- */
-/* ----- Work / Featured Projects ----- */
-/* --------------------------------------- */
+
+
+
 
 .featured-projects__grid {
     display: grid;
@@ -554,8 +554,8 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
-/* Card = the whole clickable unit */
-/* EDIT: darker background for readability */
+
+
 .featured-card {
     display: block;
     text-decoration: none;
@@ -651,7 +651,7 @@ body:not(.user-is-tabbing) a:focus {
     width: 100%;
 }
 
-/* EDIT: tags made significantly bigger and brighter */
+
 .featured-card__tags {
     font-size: 2rem;
     color: rgba(255,255,255,0.75);
@@ -673,7 +673,7 @@ body:not(.user-is-tabbing) a:focus {
     animation: cyberPulse 2.5s ease-in-out infinite;
 }
 
-/* Legacy selectors kept so sub-pages still work */
+
 .work__code {
     display: block;
     height: 3rem;
@@ -682,7 +682,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 .work__code:hover { transform: scale(1.2); }
 
-/* ----- Clients ----- */
+
 .client__logos {
     display: flex;
     justify-content: flex-start;
@@ -741,7 +741,7 @@ body:not(.user-is-tabbing) a:focus {
     z-index: 10;
 }
 
-/* little caret */
+
 .client__tooltip::after {
     content: '';
     position: absolute;
@@ -768,9 +768,9 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
-/* --------------------------------------- */
-/* ----- About + Contact side by side ----- */
-/* --------------------------------------- */
+
+
+
 
 section.about-contact {
     padding: var(--gutter-huge) 0;
@@ -805,9 +805,9 @@ section.about-contact {
     }
 }
 
-/* --------------------------------------- */
-/* ----- About ----- */
-/* --------------------------------------- */
+
+
+
 
 .about__content {
     display: flex;
@@ -836,14 +836,14 @@ section.about-contact {
     .about__text {
         flex: 0 0 35%;
     }
-    
+
     .about__photo-container {
         flex: 1;
         margin: 0 var(--gutter-huge) 0 0;
     }
 }
 
-/* Restore photo to full size inside the side-by-side layout */
+
 .about-contact__about .about__photo-container {
     flex: 0 0 42rem;
     margin: 0 var(--gutter-normal) 0 0;
@@ -853,17 +853,17 @@ section.about-contact {
     flex: 1;
 }
 
-/* --------------------------------------- */
-/* ----- Contact ----- */
-/* --------------------------------------- */
+
+
+
 
 .contact__info {
     max-width: var(--container-medium-width);
 }
 
-/* --------------------------------------- */
-/* ----- Footer ----- */
-/* --------------------------------------- */
+
+
+
 
 .footer {
     text-align: center;
@@ -899,10 +899,10 @@ section.about-contact {
 @media(max-width: 500px) {
     .footer {
         padding: var(--gutter-medium) 0;
-    } 
+    }
 }
 
-/* Hover effect just for the View All Projects button */
+
 .view-all-projects-container .btn--pink {
   transition: transform 0.3s ease, background 0.3s ease;
 }
@@ -914,7 +914,7 @@ section.about-contact {
   border-color: var(--white);
 }
 
-/* ----- All Projects Section Matching Style ----- */
+
 
 .all-projects__list {
   display: flex;
@@ -976,7 +976,7 @@ section.about-contact {
   border-color: var(--white);
 }
 
-/* Logo hover */
+
 .header__logo,
 .simple-header__logo {
     transition: transform 0.25s ease, filter 0.25s ease;
@@ -987,7 +987,7 @@ section.about-contact {
     filter: drop-shadow(0 0 12px rgba(176, 16, 48, 0.7));
 }
 
-/* ── Vertical project list cards (projects.html) ── */
+
 .projects-category__list {
     display: flex;
     flex-direction: column;
@@ -1110,7 +1110,7 @@ section.about-contact {
     filter: drop-shadow(0 2px 12px rgba(0,0,0,0.6));
 }
 
-/* Simple header for projects page */
+
 .simple-header {
   background: var(--black);
   padding: var(--gutter-small) 0;
@@ -1128,7 +1128,7 @@ section.about-contact {
   width: auto;
 }
 
-/* Projects categories */
+
 .projects-category {
   margin-bottom: var(--gutter-huge);
 }
@@ -1166,7 +1166,7 @@ section.about-contact {
   }
 }
 
-/* Project Header */
+
 .project-header {
   width: 100%;
   text-align: center;
@@ -1180,7 +1180,7 @@ section.about-contact {
   height: auto;
 }
 
-/* Universus Page Layout */
+
 .project-details__container {
   display: flex;
   gap: var(--gutter-medium);
@@ -1309,7 +1309,7 @@ section.project-details {
   padding-bottom: var(--gutter-medium) !important;
 }
 
-/* Header social icons */
+
 .header__socials {
   display: flex;
   align-items: center;
@@ -1320,7 +1320,7 @@ section.project-details {
   height: 40px;
 }
 
-/* Nav panel styling */
+
 .nav__panel {
   display: flex;
   justify-content: center;
@@ -1333,7 +1333,7 @@ section.project-details {
   z-index: 999;
 }
 
-/* Socials on the far left */
+
 .nav__socials {
   position: absolute;
   left: 40px;
@@ -1379,9 +1379,9 @@ section.project-details {
   height: 2.4rem;
 }
 
-/* ========================================================= */
-/* ===== Cybernetic Strategy – Devlog CTA Button ========= */
-/* ========================================================= */
+
+
+
 
 .devlog-cta {
   display: block;
@@ -1440,11 +1440,11 @@ section.project-details {
       0 0 32px rgba(255, 50, 88, 0.25);
   }
 }
-/* ========================================================= */
-/* ===== REDESIGNED PROJECT PAGES v2 ====================== */
-/* ========================================================= */
 
-/* Contact section – nudged further right */
+
+
+
+
 .about-contact__contact {
     padding-left: var(--gutter-medium);
 }
@@ -1452,7 +1452,7 @@ section.project-details {
     .about-contact__contact { padding-left: 0; }
 }
 
-/* Shared lightbox (global) */
+
 .lightbox {
     display: none;
     position: fixed;
@@ -1485,7 +1485,7 @@ section.project-details {
 }
 .lightbox-close:hover { color: var(--pink); }
 
-/* ── project body top: about + responsibilities ── */
+
 .project-body { padding: 0 0 var(--gutter-medium); }
 
 .project-body__top {
@@ -1528,7 +1528,7 @@ section.project-details {
     background: var(--pink);
 }
 
-/* ── media row: video left, gallery right ── */
+
 .project-body__media {
     display: grid;
     grid-template-columns: 3fr 2fr;
@@ -1554,7 +1554,7 @@ section.project-details {
     display: block;
 }
 
-/* ── gallery stack ── */
+
 .project-body__gallery {
     display: flex;
     flex-direction: column;
@@ -1606,7 +1606,7 @@ section.project-details {
     border-radius: .4rem;
 }
 
-/* ── numbered badge on each screenshot ── */
+
 .project-body__gallery-item::after {
     content: attr(data-num);
     position: absolute;
@@ -1626,7 +1626,7 @@ section.project-details {
     opacity: .9;
 }
 
-/* ── back button row ── */
+
 .project-body__back {
     margin-top: var(--gutter-medium);
     text-align: center;
@@ -1648,10 +1648,7 @@ section.project-details {
     .project-body__gallery-item { flex: 0 0 100%; }
 }
 
-/* =========================================================
-   POLISHED PORTFOLIO OVERLAY — galaxy glass / designer archive
-   Drop-in layer for Dean Satine portfolio
-   ========================================================= */
+
 :root {
   --black: #050713;
   --pink: #ff3e73;
@@ -1726,7 +1723,7 @@ h2::after {
 }
 p { color: var(--white-1); }
 
-/* Buttons / links */
+
 .btn,
 .link__text {
   border-radius: 999px;
@@ -1762,7 +1759,7 @@ p { color: var(--white-1); }
 .btn--pink:hover,
 .btn--pink:focus { background: transparent; color: var(--white); border-color: rgba(255,211,106,.6); }
 
-/* Nav */
+
 .nav__panel,
 .simple-header {
   position: sticky;
@@ -1812,7 +1809,7 @@ p { color: var(--white-1); }
 }
 .nav__socials a:hover .nav__social-icon { transform: translateY(-2px); border-color: rgba(78,232,255,.5); background: rgba(78,232,255,.12); }
 
-/* Home hero */
+
 .header {
   min-height: 100vh;
   background:
@@ -1904,7 +1901,7 @@ p { color: var(--white-1); }
 }
 .header__featured-label::after { background: linear-gradient(90deg, transparent, var(--cyan), var(--pink), transparent); width: 18rem; }
 
-/* Cards */
+
 .featured-projects__grid { gap: 2.4rem; }
 .featured-card,
 .project-list-card,
@@ -1994,7 +1991,7 @@ p { color: var(--white-1); }
 .featured-card-wrap:hover::before,
 .project-list-card:hover::before { opacity: 1; }
 
-/* Experience / about */
+
 .client__logos { gap: 2rem; }
 .client__logo-wrap {
   border-radius: 2rem;
@@ -2016,7 +2013,7 @@ section.about-contact { background: transparent; }
 }
 .about__photo { border-radius: 2rem; border: 1px solid rgba(255,255,255,.12); box-shadow: 0 20px 70px rgba(0,0,0,.38); }
 
-/* Projects archive */
+
 .simple-header { margin-top: 1.2rem; }
 .simple-header__inner { padding: 1rem 1.4rem !important; }
 .simple-header__logo { filter: drop-shadow(0 0 24px rgba(78,232,255,.13)); }
@@ -2031,7 +2028,7 @@ section.about-contact { background: transparent; }
 .project-list-card__image-wrap { min-height: 100%; }
 .project-list-card__info { display: flex; flex-direction: column; justify-content: center; }
 
-/* Project detail pages */
+
 .project-header {
   min-height: 78vh;
   padding: 4rem 2rem 7rem;
@@ -2119,14 +2116,14 @@ section.about-contact { background: transparent; }
 .project-body__gallery-item::after { background: linear-gradient(135deg, var(--cyan), var(--pink)); color: #05101a; font-family: var(--font-stack); font-weight: 900; }
 .project-body__back { margin-top: 5rem; }
 
-/* Legal */
+
 .privacy-content {
   border-radius: 2.4rem;
   padding: 3rem;
 }
 .privacy-content a { color: var(--cyan); }
 
-/* Footer */
+
 .footer {
   padding: 4rem 0;
   text-align: center;
@@ -2139,7 +2136,7 @@ section.about-contact { background: transparent; }
   box-shadow: 0 18px 48px rgba(78,232,255,.18);
 }
 
-/* Reveal animation */
+
 .reveal-ready {
   opacity: 0;
   transform: translateY(22px);
@@ -2147,7 +2144,7 @@ section.about-contact { background: transparent; }
 }
 .reveal-ready.is-visible { opacity: 1; transform: translateY(0); }
 
-/* Responsive polish */
+
 @media (max-width: 1000px) {
   .nav__panel { position: relative; top: 0; border-radius: 2.2rem; margin-top: 1rem; }
   .nav__socials { width: 100%; justify-content: center; margin-top: .8rem; }
@@ -2178,12 +2175,7 @@ section.about-contact { background: transparent; }
 }
 
 
-/* =========================================================
-   HOME HERO CLEANUP PATCH
-   - removes top CTA/chips space
-   - fixes nav overlap
-   - enlarges featured project cards
-   ========================================================= */
+
 
 .portfolio-home .header {
   min-height: 100vh;
@@ -2357,7 +2349,7 @@ section.about-contact { background: transparent; }
   }
 }
 
-/* Cybernetic Strategy command center */
+
 .cybernetic-command-center {
   position: relative;
   isolation: isolate;
@@ -2433,7 +2425,7 @@ section.about-contact { background: transparent; }
   .featured-card-wrap--satellite, .featured-card-wrap--satellite:hover { transition: none; transform: none; }
 }
 
-/* First-screen priority: keep the primary project visible without scrolling */
+
 .portfolio-home .header__hero {
   padding-top: .8rem;
   padding-bottom: 2.5rem;
@@ -2493,7 +2485,7 @@ section.about-contact { background: transparent; }
   .portfolio-home .command-center__visual img { min-height: 34rem; }
 }
 
-/* Compact Cybernetic Strategy detail header with Steam artwork rail */
+
 .project-page .project-header {
   min-height: 0;
   padding: 3.6rem 2rem 3.2rem;
@@ -2603,7 +2595,7 @@ section.about-contact { background: transparent; }
   .project-page .project-header__image { width: min(92vw, 58rem); max-height: 28vh; }
 }
 
-/* Keep secondary projects small and peripheral */
+
 @media (min-width: 601px) {
   .portfolio-home .cybernetic-command-center { padding-bottom: 1.8rem; }
   .portfolio-home .command-center__content { padding-bottom: 13rem; }
@@ -2645,7 +2637,7 @@ section.about-contact { background: transparent; }
   }
 }
 
-/* Secondary project shortcuts sit beside the archive button */
+
 .portfolio-home .view-all-projects-container {
   display: flex;
   align-items: center;
@@ -2688,7 +2680,7 @@ section.about-contact { background: transparent; }
   }
 }
 
-/* Full-page Steam character sidebars */
+
 .project-page > header,
 .project-page > main,
 .project-page > footer { position: relative; z-index: 2; }
@@ -2728,7 +2720,7 @@ section.about-contact { background: transparent; }
   .project-page-sidebars { display: none; }
 }
 
-/* Shared Cybernetic Strategy video atmosphere */
+
 body.video-atmosphere-enabled { isolation: isolate; }
 .portfolio-video-background {
   position: fixed;
@@ -2756,12 +2748,7 @@ body.video-atmosphere-enabled { isolation: isolate; }
 }
 
 
-/* =========================================================
-   NAV SCALE PATCH
-   - larger top bar
-   - larger nav labels and social icons
-   - removes unused eyebrow spacing
-   ========================================================= */
+
 
 .portfolio-home .nav.nav__panel {
   width: min(1180px, calc(100% - 4rem));
